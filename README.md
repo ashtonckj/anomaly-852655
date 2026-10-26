@@ -12,13 +12,9 @@ $$a(0) = 0$$
 
 For every step $n = 1, 2, 3, \dots$ try to jump **backwards** by $n$. If that is not allowed, jump **forwards**:
 
-$$
-a(n) =
-\begin{cases}
-a(n-1) - n & \text{if } a(n-1) - n > 0 \; \land \; a(n-1) - n \notin \{a(0), \dots, a(n-1)\} \\[4pt]
-a(n-1) + n & \text{otherwise}
-\end{cases}
-$$
+```math
+a(n) = \begin{cases} a(n-1) - n & \text{if } a(n-1) - n > 0 \; \land \; a(n-1) - n \notin \{a(0), \dots, a(n-1)\} \\\\ a(n-1) + n & \text{otherwise} \end{cases}
+```
 
 In words: go back by $n$ if you land on a positive number you have **never visited**; otherwise go forward by $n$.
 
