@@ -15,7 +15,7 @@ For every step $n = 1, 2, 3, \dots$ try to jump **backwards** by $n$. If that is
 $$
 a(n) =
 \begin{cases}
-a(n-1) - n & \text{if } a(n-1) - n > 0 \text{ and } a(n-1) - n \notin \{a(0), \dots, a(n-1)\} \\[4pt]
+a(n-1) - n & \text{if } a(n-1) - n > 0 \; \land \; a(n-1) - n \notin \{a(0), \dots, a(n-1)\} \\[4pt]
 a(n-1) + n & \text{otherwise}
 \end{cases}
 $$
