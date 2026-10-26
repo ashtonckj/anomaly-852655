@@ -52,8 +52,8 @@ How long does it take to compute $10^6$, $10^9$ (and maybe $10^{10}$) terms of t
 C version (`recaman.c`, already written):
 
 ```bash
-gcc -O3 -march=native -o recaman recaman.c
-./recaman 1000000          # Windows: recaman.exe 1000000
+gcc -O3 -march=native -o experiments/02-speed-benchmark/recaman experiments/02-speed-benchmark/recaman.c
+experiments/02-speed-benchmark/recaman 1000000        #Linux/macOS: ./experiments/02-speed-benchmark/recaman 1000000
 ```
 
 On Windows, install a compiler once: `winget install BrechtSanders.WinLibs.POSIX.UCRT`, then reopen the terminal and check `gcc --version`.
