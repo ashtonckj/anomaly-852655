@@ -8,7 +8,7 @@ Back to the [main README](../README.md).
 | # | Experiment | Question | Status |
 | --- | --- | --- | --- |
 | 01 | [Custom start value](01-custom-start/README.md) | What changes if $a(0) = k$ instead of $0$? | planned |
-| 02 | [Speed benchmark](02-speed-benchmark/README.md) | How fast can 1M / 1B terms be computed, and in which language? | planned |
+| 02 | [Speed benchmark](02-speed-benchmark/README.md) | How fast can 1M / 1B terms be computed, and in which language? | running |
 
 Status values: `idea` → `planned` → `running` → `done`.
 
@@ -20,7 +20,8 @@ One line per discovery. Link to the experiment that produced it.
 | --- | --- |
 | 42 is the first value to repeat: $a(20) = a(24) = 42$ | baseline (Python, `recaman.py`) |
 | The number 19 does not appear until $n = 99{,}734$ | baseline (Python, `recaman.py`) |
-| Largest value so far is about $4n$ to $6n$ (3.8× at 10k terms, 5.9× at 1M) | baseline (Python, `recaman.py`) |
+| Largest value so far is about $4n$ to $6n$ (3.8× at 10k terms, 5.9× at 1M, 6.7× at 1B) | baseline (Python, `recaman.py`) |
+| C computes $10^9$ terms in 1.7 s: $a(10^9) = 3{,}802{,}905{,}932$, max $6{,}699{,}287{,}376$ | [02](02-speed-benchmark/README.md) |
 | $a(10^6) = 2{,}057{,}164$; largest value in the first $10^6 + 1$ terms is $5{,}946{,}126$ | baseline (Python, `recaman.py`) |
 
 ## Idea backlog
