@@ -1,6 +1,6 @@
 // Recaman sequence, speed benchmark version (no plotting).
-// Build:  gcc -O3 -march=native -o recaman recaman.c
-// Run:    ./recaman 1000000        (Windows: recaman.exe 1000000)
+// Build:  gcc -O3 -march=native -o experiments/02-speed-benchmark/recaman experiments/02-speed-benchmark/recaman.c
+// Run:    experiments/02-speed-benchmark/recaman 1000000        (Linux/macOS: ./experiments/02-speed-benchmark/recaman 1000000)
 //
 // Computes a(0)..a(N), prints a(N), the largest value, and the time taken.
 // Visited numbers are stored in a bitset (1 bit per integer).
