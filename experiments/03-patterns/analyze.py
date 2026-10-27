@@ -1,6 +1,6 @@
 """Analyse runs.csv / checkpoints.csv written by scan.c  (experiment 03).
 
-    python analyze.py            # reads runs.csv and checkpoints.csv in this folder
+    python experiments/03-patterns/analyze.py            # reads runs.csv and checkpoints.csv in this folder
 
 Method (kept simple on purpose):
   1. Every long zigzag run has a ceiling `hi`. Group runs whose ceilings are within 2% of each other.
@@ -13,7 +13,7 @@ import pandas as pd
 MIN_RUNS = 40   # a ring needs at least this many long runs (natural gap: rings have 48+, the rest have <= 22)
 TRAIN = 5       # fit on the first TRAIN rings only, predict the rest
 
-runs = pd.read_csv("runs.csv")
+runs = pd.read_csv("experiments/03-patterns/runs.csv")
 runs["n_end"] = runs.n_start + runs.length
 runs = runs.sort_values("hi").reset_index(drop=True)
 runs["group"] = (runs.hi > runs.hi.shift() * 1.02).cumsum()
@@ -48,7 +48,7 @@ for j in range(len(rings), len(rings) + 4):
 print("\nORIENTATION (parity of n on forward steps) in ring order:", "".join(str(p) for p in rings.parity))
 print("alternates every ring?", all(rings.parity[i] != rings.parity[i + 1] for i in range(len(rings) - 1)))
 
-cp = pd.read_csv("checkpoints.csv")
+cp = pd.read_csv("experiments/03-patterns/checkpoints.csv")
 cp["max/N"] = (cp["max"] / cp.N).round(2)
 cp["unvisited_%"] = (cp.unvisited_below_max / cp["max"] * 100).round(1)
 print("\nCHECKPOINTS")
