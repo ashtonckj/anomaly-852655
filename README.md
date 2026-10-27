@@ -48,6 +48,7 @@ Everything beyond the picture lives in [`experiments/`](experiments/README.md): 
 | --- | --- | --- |
 | 01 | [Custom start value](experiments/01-custom-start/README.md) | planned |
 | 02 | [Speed benchmark (1M / 1B iterations)](experiments/02-speed-benchmark/README.md) | running |
+| 03 | [Rings, ceilings and predictions](experiments/03-patterns/README.md) | done, predictions open |
 
 See the [experiments index](experiments/README.md) for the full list, the findings log and how to add a new one.
 
